@@ -1,11 +1,5 @@
 p      = 1
 n      = 0616015
-TARGET = scanner
-OBJECT = lex.yy.c
-CC     = gcc
-CFLAGS = -Wall -Wextra -pedantic -g3
-LEX    = flex
-LIBS   = -lfl
 
 all: $(TARGET)
 
