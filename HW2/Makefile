@@ -1,5 +1,6 @@
 p      = 1
 n      = 0616015
+TARGET = out
 
 all: $(TARGET)
 
