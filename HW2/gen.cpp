@@ -4,23 +4,26 @@ using namespace std;
 int main() {
     srand(time(NULL));
     
-    int n = 50 + rand() % 100;
-    int pri = 1;
+    int n = 5 + rand() % 10;
+    vector<int> pri(n);
 
     cout << n << '\n';
 
     // arrival time
-    for (int i = 0; i < n; i ++)
+    for (int i = 0; i < n; i ++) {
         cout << rand() % 1000 << ' ';
+        pri[i] = i;
+    }
     cout << '\n';
 
     // burst time
     for (int i = 0; i < n; i ++)
-        cout << rand() % 1000 << ' ';
+        cout << 5 + rand() % 1000 << ' ';
     cout << '\n';
 
     // priority
+    random_shuffle(pri.begin(), pri.end());
     for (int i = 0; i < n; i ++)
-        if (pri) cout << rand() % 20 << ' ';
-    if (pri) cout << '\n';
+        cout << pri[i] << ' ';
+    cout << '\n';
 }
