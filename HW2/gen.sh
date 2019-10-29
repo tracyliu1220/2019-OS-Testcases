@@ -5,7 +5,7 @@
 p=$1
 
 
-for i in {2..10}; do
+for i in {11..15}; do
     if [ $p -eq 4 ]; then
         g++ gen4.cpp -o gen.out
     else

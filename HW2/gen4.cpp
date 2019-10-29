@@ -14,12 +14,9 @@ int main() {
     srand(time(NULL));
 
     // total = n * seq
-    int seq = 3 + rand() % 2;
-    int n = 1 + rand() % 4;
-    int qn = 3 + rand() % 10;
-
-    cout << "n   = " << n << '\n';
-    cout << "seq = " << seq << '\n';
+    int seq = 3 + rand() % 20;
+    int n = 1 + rand() % 10;
+    int qn = 3 + rand() % 30;
 
     cout << n * seq << '\n';
     p.resize(seq * n);
@@ -33,7 +30,7 @@ int main() {
         for (int j = 0; j < seq; j ++) {
             int idx = seq * i + j;
             p[idx].id = idx;
-            p[idx].burst = rand() % 20 + 1;
+            p[idx].burst = rand() % 50 + 1;
             if (j == 0) p[idx].arrival = base;
             else {
                 p[idx].arrival = base + rand() % buf;
